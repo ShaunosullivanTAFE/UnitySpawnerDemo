@@ -7,13 +7,18 @@ public class Spawner : MonoBehaviour
     public GameObject spawnee;
     public bool stopSpawning = false;
     public float spawnTime = 2;
-    public float spawnDelay = 0.1f;
+    public float spawnDelay = 1f;
 
 
     // Start is called before the first frame update
     void Start()
     {
         // Fire the provided method, after spawnTime seconds, every spawnDelay seconds
+
+        int difficulty = PlayerPrefs.GetInt("Difficulty", 0) + 1;
+
+        spawnDelay = spawnDelay / difficulty;
+
         InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
     }
 

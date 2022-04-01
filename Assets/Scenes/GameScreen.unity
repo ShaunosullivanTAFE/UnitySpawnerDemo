@@ -612,7 +612,7 @@ MonoBehaviour:
   spawnee: {fileID: 945096887}
   stopSpawning: 0
   spawnTime: 2
-  spawnDelay: 0.5
+  spawnDelay: 1
 --- !u!212 &1859445185
 SpriteRenderer:
   m_ObjectHideFlags: 0
